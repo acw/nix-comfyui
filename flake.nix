@@ -65,7 +65,7 @@
                 (name: mkPackageEntry [ platform name ])
                 [ "comfyui" "comfyui-with-extensions" ])
             )
-            [ "cuda" "rocm" ])
+            [ "cuda" "rocm" "cpu" ])
         ));
       in
       {
@@ -106,6 +106,7 @@
 
           cuda-run-check-pkgs = comfyuiPackages.cuda.run-check-pkgs;
           rocm-run-check-pkgs = comfyuiPackages.rocm.run-check-pkgs;
+          cpu-run-check-pkgs = comfyuiPackages.cpu.run-check-pkgs;
         };
 
         legacyPackages = comfyuiPackages;
